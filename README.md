@@ -11,6 +11,10 @@ All code snippets are based on and follow the official svelte documentation.
 
 Type part of a snippet, press enter, and the snippet unfolds.
 
+# Snippets Documentation
+| Prefix | Description |
+| ------- | ----------|
+| `s-` | Svelte Snippets |
 
 <!-- Auto Generated Below -->
 
