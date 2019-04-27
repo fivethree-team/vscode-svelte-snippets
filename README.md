@@ -13,6 +13,10 @@ All code snippets are based on and follow the official svelte documentation.
 
 Type part of a snippet, press enter, and the snippet unfolds.
 
+# Contributing
+
+Contributions are welcome! See [Contribution Guidelines](CONTRIBUTING.md) to get started.
+
 # Snippets Documentation
 | Prefix | Description |
 | ------- | ----------|
