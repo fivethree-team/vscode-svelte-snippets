@@ -44,7 +44,7 @@
         "prefix": "s-global-style",
         "body": [
             ":global(${1:body}) {",
-            "\t/* this will apply to <${1:body}> */",
+            "\t/* this will apply to <body> */",
             "\t${2:/* your styles go here */}",
             "}"
         ],
@@ -84,6 +84,14 @@
         ],
         "description": "if else block"
     },
+    "svelte-else-block": {
+        "prefix": "s-else-block",
+        "body": [
+            "{:else}",
+            "\t${1: <!-- else content here -->}"
+        ],
+        "description": "else block"
+    },
     "svelte-if-else-if-block": {
         "prefix": "s-if-else-if-block",
         "body": [
@@ -96,6 +104,14 @@
             "{/if}"
         ],
         "description": "if else if block"
+    },
+    "svelte-else-if-block": {
+        "prefix": "s-else-if-block",
+        "body": [
+            "{:else if ${1: otherCondition}}",
+            "\t${2: <!-- else if content here -->}"
+        ],
+        "description": "else if block"
     },
     "svelte-each-block": {
         "prefix": "s-each-block",
@@ -148,24 +164,32 @@
         "prefix": "s-await-then-block",
         "body": [
             "{#await ${1:promise}}",
-            "\t<!-- ${1:promise} is pending -->",
-            "{:then ${value}}",
-            "\t<!-- ${1:promise} was fulfilled -->",
+            "\t<!-- promise is pending -->",
+            "{:then ${2:value}}",
+            "\t<!-- promise was fulfilled -->",
             "{/await}"
         ],
         "description": "await then block"
+    },
+    "svelte-then-block": {
+        "prefix": "s-then-block",
+        "body": [
+            "{:then ${1:value}}",
+            "\t<!-- promise was fulfilled -->"
+        ],
+        "description": "then block"
     },
     "svelte-await-short-block": {
         "prefix": "s-await-short-block",
         "body": [
             "{#await ${1:promise} then ${2:value}}",
-            "\t<!-- ${1:promise} was fulfilled -->",
+            "\t<!-- promise was fulfilled -->",
             "{/await}"
         ],
         "description": "await short block"
     },
     "svelte-await-catch-block": {
-        "prefix": "s-await-block",
+        "prefix": "s-await-catch-block",
         "body": [
             "{#await ${1:promise}}",
             "\t<!-- ${1:promise} is pending -->",
@@ -176,6 +200,14 @@
             "{/await}"
         ],
         "description": "await catch block"
+    },
+    "svelte-catch-block": {
+        "prefix": "s-catch-block",
+        "body": [
+            "{:catch error}",
+            "\t<!-- promise was rejected -->"
+        ],
+        "description": "catch block"
     },
     "svelte-on-event": {
         "prefix": "s-on-event",
