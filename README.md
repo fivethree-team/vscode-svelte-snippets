@@ -16,6 +16,5 @@ Type part of a snippet, press enter, and the snippet unfolds.
 | Prefix | Description |
 | ------- | ----------|
 | `s-` | Svelte Snippets |
-                                       |
 **[⬆ back to top](#table-of-content)**
 
