@@ -187,14 +187,14 @@
     "svelte-on-event-forward": {
         "prefix": "s-on-event-foward",
         "body": [
-            "on:${1:eventname}}"
+            "on:${1:eventname}"
         ],
         "description": "on event foward"
     },
     "svelte-on-event-modifiers": {
         "prefix": "s-on-event-modifiers",
         "body": [
-            "on:${1:eventname}|${2:|preventDefault,stopPropagation,passive,capture,once|}={${3:handler}}"
+            "on:${1:eventname}|${2|preventDefault,stopPropagation,passive,capture,once|}={${3:handler}}"
         ],
         "description": "on event w/ modifiers"
     },
@@ -208,7 +208,7 @@
     "svelte-modifiers": {
         "prefix": "s-modifier",
         "body": [
-            "|${1:|preventDefault,stopPropagation,passive,capture,once|}"
+            "|${1|preventDefault,stopPropagation,passive,capture,once|}"
         ],
         "description": "modifier"
     },
@@ -229,7 +229,7 @@
     "svelte-bind-block-level": {
         "prefix": "s-bind-block-level",
         "body": [
-            "bind:${1:|clientWidth,clientHeight,offsetWidth,offsetHeight|}={${2:variable}}"
+            "bind:${1|clientWidth,clientHeight,offsetWidth,offsetHeight|}={${2:variable}}"
         ],
         "description": "bind property"
     },
@@ -323,28 +323,28 @@
     "svelte-transition": {
         "prefix": "s-transition",
         "body": [
-            "${1:|transition,in,out|}:${2:name}"
+            "${1|transition,in,out|}:${2:name}"
         ],
         "description": "transition"
     },
     "svelte-transition-params": {
         "prefix": "s-transition-params",
         "body": [
-            "${1:|transition,in,out|}:${2:name}={${3:params}}"
+            "${1|transition,in,out|}:${2:name}={${3:params}}"
         ],
         "description": "transition-params"
     },
     "svelte-transition-local": {
         "prefix": "s-transition-local",
         "body": [
-            "${1:|transition,in,out|}:${2:name}|${3:local}"
+            "${1|transition,in,out|}:${2:name}|${3:local}"
         ],
         "description": "transition local"
     },
     "svelte-transition-all": {
         "prefix": "s-transition",
         "body": [
-            "${1:|transition,in,out|}:${2:name}|${3:local}={${4:params}}"
+            "${1|transition,in,out|}:${2:name}|${3:local}={${4:params}}"
         ],
         "description": "transition"
     },
@@ -400,7 +400,7 @@
     "svelte-window-bind": {
         "prefix": "s-window-bind",
         "body": [
-            "bind:${1:|innerWidth,innerHeight,outerWidth,outerHeight,scrollX,scrollY,online|}={${2:variable}}"
+            "bind:${1|innerWidth,innerHeight,outerWidth,outerHeight,scrollX,scrollY,online|}={${2:variable}}"
         ],
         "description": "svelte:window bind properties"
     },
@@ -423,7 +423,7 @@
     "svelte-options": {
         "prefix": "s-options",
         "body": [
-            "<svelte:options ${1:|immutable,accessors,namespace,tag|}={${2:value}/>"
+            "<svelte:options ${1|immutable,accessors,namespace,tag|}={${2:value}/>"
         ],
         "description": "svelte:options"
     },
@@ -568,11 +568,11 @@
         "prefix": "s-create-component",
         "body": [
             "const component = new ${1:App}({",
-            "target: ${2:|target,document.body|},",
+            "target: ${2|target,document.body|},",
             "props: ${3:props},",
             "anchor: ${4:anchor},",
-            "hydrate: ${5:|false,true|},",
-            "intro: ${5:|false,true|}",
+            "hydrate: ${5|false,true|},",
+            "intro: ${5|false,true|}",
             "})"
         ],
         "description": "svelte create component"
