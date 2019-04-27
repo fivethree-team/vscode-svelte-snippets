@@ -40,6 +40,14 @@
             {
                 "language": "svelte",
                 "path": "./snippets/svelte.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/svelte-script.json"
+            },
+            {
+                "language": "css",
+                "path": "./snippets/svelte-style.json"
             }
         ]
     },
