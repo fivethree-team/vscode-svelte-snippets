@@ -20,7 +20,7 @@
         "description": "reactive statement"
     },
     "svelte-reactive-block": {
-        "prefix": "s-reactive-statement",
+        "prefix": "s-reactive-block",
         "body": [
             "$: { ${1:console.log(${2:prop});}}"
         ],
@@ -150,7 +150,7 @@
         "description": "svelte writeable"
     },
     "svelte-writeable-set": {
-        "prefix": "s-writeable",
+        "prefix": "s-writeable-set",
         "body": [
             "const ${1:store} = writable(${2:initialValue}, () => {",
             "\t${3:console.log('got a subscriber');}",
@@ -177,7 +177,7 @@
         "description": "svelte derived store"
     },
     "svelte-derived-multiple": {
-        "prefix": "s-derived",
+        "prefix": "s-derived-multiple",
         "body": [
             "const ${1:derivedStore} = derived([${2:storeA}, ${3:storeB}], ([$${2:storeA}, $${3:storeB}]) => $${2:storeA} + $${3:storeB});"
         ],

@@ -49,7 +49,7 @@
         "description": "basic expression"
     },
     "svelte-expression-html": {
-        "prefix": "s-expression",
+        "prefix": "s-expression-html",
         "body": [
             "{@html ${1:expression}}"
         ],
@@ -320,7 +320,7 @@
         "description": "transition local"
     },
     "svelte-transition-all": {
-        "prefix": "s-transition",
+        "prefix": "s-transition-all",
         "body": [
             "${1|transition,in,out|}:${2:name}|${3:local}={${4:params}}"
         ],
@@ -341,7 +341,7 @@
         "description": "slot w/ name"
     },
     "svelte-slot-prop": {
-        "prefix": "s-slot-name",
+        "prefix": "s-slot-prop",
         "body": [
             "<slot ${1:prop}={${2:value}}>${3:<!-- optional fallback -->}</slot>"
         ],
