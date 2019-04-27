@@ -19,15 +19,9 @@ Type part of a snippet, press enter, and the snippet unfolds.
 <!-- Auto Generated Below -->
 
 # Table of Content
-* [Snippets Documentation](#snippets-documentation)
   * [Svelte](#svelte)
   * [Javascript](#javascript)
   * [Css](#css)
-
-# Snippets Documentation
-| Prefix | Description |
-| ------- | ----------|
-| `s-` | Svelte Snippets |
 
 ## Svelte
 
