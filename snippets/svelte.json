@@ -238,7 +238,7 @@
     "svelte-bind": {
         "prefix": "s-bind",
         "body": [
-            "bind:${1:property}}"
+            "bind:${1:property}"
         ],
         "description": "bind property"
     },
@@ -401,7 +401,7 @@
     "svelte-options": {
         "prefix": "s-options",
         "body": [
-            "<svelte:options ${1|immutable,accessors,namespace,tag|}={${2:value}/>"
+            "<svelte:options ${1|immutable,accessors,namespace,tag|}={${2:value}}/>"
         ],
         "description": "svelte:options"
     }
