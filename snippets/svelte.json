@@ -393,7 +393,7 @@
         "prefix": "s-head",
         "body": [
             "<svelte:head>",
-            "\t{1:<!-- head content -->}",
+            "\t${1:<!-- head content -->}",
             "</svelte:head>"
         ],
         "description": "svelte:head"
