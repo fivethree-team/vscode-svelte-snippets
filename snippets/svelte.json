@@ -356,6 +356,13 @@
         ],
         "description": "transition"
     },
+    "svelte-animate": {
+        "prefix": "s-animate",
+        "body": [
+            "animate:${1:name}={${2:params}}"
+        ],
+        "description": "animate"
+    },
     "svelte-slot": {
         "prefix": "s-slot",
         "body": [
