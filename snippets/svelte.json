@@ -55,6 +55,13 @@
         ],
         "description": "html content expression"
     },
+    "svelte-expression-debug": {
+        "prefix": "s-expression-debug",
+        "body": [
+            "{@debug ${1:var1}${2:,var2}}"
+        ],
+        "description": "html content expression"
+    },
     "svelte-if-block": {
         "prefix": "s-if-block",
         "body": [
