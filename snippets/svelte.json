@@ -335,6 +335,13 @@
         ],
         "description": "transition-params"
     },
+    "svelte-transition-events": {
+        "prefix": "s-transition-events",
+        "body": [
+            "on:${1|introstart,introend,outrostart,outroend|}=\"{() => status = '${1|introstart,introend,outrostart,outroend|}'}\""
+        ],
+        "description": "transition-events"
+    },
     "svelte-transition-local": {
         "prefix": "s-transition-local",
         "body": [
