@@ -256,6 +256,22 @@
         ],
         "description": "bind property"
     },
+    "svelte-bind-video": {
+        "prefix": "s-bind-video",
+        "body": [
+            "<video",
+            "src={${1:clip}}",
+            "bind:${2:duration}",
+            "bind:${3:buffered}",
+            "bind:${4:seekable}",
+            "bind:${5:played}",
+            "bind:${6:currentTime}",
+            "bind:${7:paused}",
+            "bind:${8:volume}",
+            "></video>"
+        ],
+        "description": "bind property"
+    },
     "svelte-bind-block-level": {
         "prefix": "s-bind-block-level",
         "body": [
@@ -301,7 +317,7 @@
     "svelte-use-parameters": {
         "prefix": "s-use-parameters",
         "body": [
-            "use:action={parameters}"
+            "use:action={${1:parameters}}"
         ],
         "description": "use action w/ parameters"
     },
