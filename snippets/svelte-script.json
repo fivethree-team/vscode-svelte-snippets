@@ -237,5 +237,27 @@
             "})"
         ],
         "description": "svelte render component"
+    },
+    "svelte-tweened": {
+        "prefix": "s-tweened",
+        "body": [
+            "const ${1:store} = tweened(${2:value}, ${3:options});"
+        ],
+        "description": "svelte create tweened store"
+    },
+    "svelte-spring": {
+        "prefix": "s-spring",
+        "body": [
+            "const ${1:store} = spring(${2:value}, ${3:options});"
+        ],
+        "description": "svelte create spring store"
+    },
+    "svelte-register": {
+        "prefix": "s-register",
+        "body": [
+            "require('svelte/register');",
+            "const ${1:App} = require('${2:./App.svelte}').default;"
+        ],
+        "description": "svelte register"
     }
 }
