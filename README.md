@@ -25,6 +25,7 @@ Contributions are welcome! See [Contribution Guidelines](CONTRIBUTING.md) to get
 <!-- Auto Generated Below -->
 
 # Table of Content
+* [Snippets Documentation](#snippets-documentation)
   * [Svelte](#svelte)
   * [Javascript](#javascript)
   * [Css](#css)
@@ -39,6 +40,7 @@ s-script-context|add a script with context="module" to your svelte file
 s-style|add styles to your svelte file
 s-expression|basic expression
 s-expression-html|html content expression
+s-expression-debug|html content expression
 s-if-block|if block
 s-if-else-block|if else block
 s-else-block|else block
@@ -61,6 +63,7 @@ s-on-event-inline|on event inline
 s-modifier|modifier
 s-bind|bind property
 s-bind-property|bind property
+s-bind-video|bind property
 s-bind-block-level|bind property
 s-bind-group|bind group
 s-bind-this|bind this
@@ -70,8 +73,10 @@ s-use|use action
 s-use-parameters|use action w/ parameters
 s-transition|transition
 s-transition-params|transition-params
+s-transition-events|transition-events
 s-transition-local|transition local
 s-transition-all|transition
+s-animate|animate
 s-slot|slot
 s-slot-name|slot w/ name
 s-slot-prop|slot w/ prop
@@ -115,6 +120,9 @@ s-component-set|svelte component api $set
 s-component-on|svelte component api $on
 s-component-destroy|svelte component api $destroy
 s-render-component|svelte render component
+s-tweened|svelte create tweened store
+s-spring|svelte create spring store
+s-register|svelte register
 
 ## Css
 
