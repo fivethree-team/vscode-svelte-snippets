@@ -5,6 +5,7 @@
     "version": "0.2.0",
     "license": "MIT",
     "publisher": "fivethree",
+    "icon": "icons/logo.png",
     "repository": {
         "type": "git",
         "url": "https://github.com/fivethree-team/vscode-svelte-snippets.git"
