@@ -1,3 +1,10 @@
+# [0.4.0](https://github.com/fivethree-team/vscode-svelte-snippets/compare/v0.3.0...v0.4.0) (2020-05-27)
+
+### Features
+
+* **snippets:** Add snippet support for HTML language
+
+
 <a name="0.3.0"></a>
 # [0.3.0](https://github.com/fivethree-team/vscode-svelte-snippets/compare/v0.2.0...v0.3.0) (2019-07-03)
 
