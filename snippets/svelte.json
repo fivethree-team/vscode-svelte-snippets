@@ -257,20 +257,53 @@
         "description": "bind property"
     },
     "svelte-bind-video": {
-        "prefix": "s-bind-video",
-        "body": [
-            "<video",
-            "src={${1:clip}}",
-            "bind:${2:duration}",
-            "bind:${3:buffered}",
-            "bind:${4:seekable}",
-            "bind:${5:played}",
-            "bind:${6:currentTime}",
-            "bind:${7:paused}",
-            "bind:${8:volume}",
-            "></video>"
-        ],
-        "description": "bind property"
+      "prefix": "s-bind-video",
+      "body": [
+        "<video",
+        "src={${1:clip}}",
+        "bind:${2:duration}",
+        "bind:${3:buffered}",
+        "bind:${4:played}",
+        "bind:${5:seekable}",
+        "bind:${6:seeking}",
+        "bind:${7:ended}",
+        "bind:${8:currentTime}",
+        "bind:${9:playbackRate}",
+        "bind:${10:paused}",
+        "bind:${11:volume}",
+        "bind:${12:muted}",
+        "bind:${13:videoWidth}",
+        "bind:${14:videoHeight}",
+        "></video>"
+      ],
+      "description": "bind property"
+    },
+    "svelte-bind-audio": {
+      "prefix": "s-bind-audio",
+      "body": [
+        "<audio",
+        "src={${1:clip}}",
+        "bind:${2:duration}",
+        "bind:${3:buffered}",
+        "bind:${4:played}",
+        "bind:${5:seekable}",
+        "bind:${6:seeking}",
+        "bind:${7:ended}",
+        "bind:${8:currentTime}",
+        "bind:${9:playbackRate}",
+        "bind:${10:paused}",
+        "bind:${11:volume}",
+        "bind:${12:muted}",
+        "></audio>"
+      ],
+      "description": "bind property"
+    },
+    "svelte-bind-media-elements": {
+      "prefix": "s-bind-media-elements",
+      "body": [
+        "bind:${1|duration,buffered,played,seekable,seeking,ended,currentTime,playbackRate,paused,volume,muted,videoWidth,videoHeight|}"
+      ],
+      "description": "bind property"
     },
     "svelte-bind-block-level": {
         "prefix": "s-bind-block-level",
