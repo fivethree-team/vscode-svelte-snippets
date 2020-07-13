@@ -1,3 +1,12 @@
+# [0.5.0](https://github.com/fivethree-team/vscode-svelte-snippets/compare/v0.4.0...v0.5.0) (2020-07-13)
+
+
+### Features
+
+* **snippets:** add bindings to video, ([caec671](https://github.com/fivethree-team/vscode-svelte-snippets/commit/caec671ddae232415d1770a27679bb6d115e4629)), closes [#8](https://github.com/fivethree-team/vscode-svelte-snippets/issues/8)
+
+
+
 # [0.4.0](https://github.com/fivethree-team/vscode-svelte-snippets/compare/v0.3.0...v0.4.0) (2020-05-27)
 
 ### Features

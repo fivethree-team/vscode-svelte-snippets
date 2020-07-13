@@ -1,64 +1,64 @@
 {
-    "name": "vscode-svelte-snippets",
-    "displayName": "Svelte 3 Snippets",
-    "description": "Svelte 3 Snippets for VS Code",
-    "version": "0.4.0",
-    "license": "MIT",
-    "publisher": "fivethree",
-    "icon": "icons/logo.png",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/fivethree-team/vscode-svelte-snippets.git"
-    },
-    "bugs": {
-        "url": "https://github.com/fivethree-team/vscode-svelte-snippets/issues"
-    },
-    "engines": {
-        "vscode": "^1.26.0"
-    },
-    "categories": [
-        "Snippets"
-    ],
-    "keywords": [
-        "svelte",
-        "snippets"
-    ],
-    "contributes": {
-        "languages": [
-            {
-                "id": "svelte",
-                "aliases": [
-                    "Svelte",
-                    "Svelte 3",
-                    "svelte"
-                ],
-                "filenamePatterns": [
-                    "*.svelte"
-                ]
-            }
+  "name": "vscode-svelte-snippets",
+  "displayName": "Svelte 3 Snippets",
+  "description": "Svelte 3 Snippets for VS Code",
+  "version": "0.5.0",
+  "license": "MIT",
+  "publisher": "fivethree",
+  "icon": "icons/logo.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fivethree-team/vscode-svelte-snippets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fivethree-team/vscode-svelte-snippets/issues"
+  },
+  "engines": {
+    "vscode": "^1.26.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "svelte",
+    "snippets"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "svelte",
+        "aliases": [
+          "Svelte",
+          "Svelte 3",
+          "svelte"
         ],
-        "snippets": [
-            {
-                "language": "svelte",
-                "path": "./snippets/svelte.json"
-            },
-            {
-                "language": "javascript",
-                "path": "./snippets/svelte-script.json"
-            },
-            {
-                "language": "css",
-                "path": "./snippets/svelte-style.json"
-            },
-            {
-                "language": "html",
-                "path": "./snippets/svelte.json"
-            }
+        "filenamePatterns": [
+          "*.svelte"
         ]
-    },
-    "scripts": {
-        "vscode:publish": "vsce publish",
-        "version": "conventional-changelog -p angular -i ./CHANGELOG.md -s"
-    },
-    "devDependencies": {}
+      }
+    ],
+    "snippets": [
+      {
+        "language": "svelte",
+        "path": "./snippets/svelte.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/svelte-script.json"
+      },
+      {
+        "language": "css",
+        "path": "./snippets/svelte-style.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/svelte.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:publish": "vsce publish",
+    "version": "conventional-changelog -p angular -i ./CHANGELOG.md -s"
+  },
+  "devDependencies": {}
 }
