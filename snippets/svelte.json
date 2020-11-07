@@ -1,478 +1,418 @@
 {
-    "svelte-component-format": {
-        "prefix": "s-component-format",
-        "body": [
-            "<script>",
-            "\t${1:// your script goes here}",
-            "</script>",
-            "",
-            "<style>",
-            "\t${2:/* your styles go here */}",
-            "</style>",
-            "",
-            "${3:<!-- markup (zero or more items) goes here -->}"
-        ],
-        "description": "add a script to your svelte file"
-    },
-    "svelte-script-tag": {
-        "prefix": "s-script",
-        "body": [
-            "<script>",
-            "\t${1:// your script goes here}",
-            "</script>"
-        ],
-        "description": "add a script to your svelte file"
-    },
-    "svelte-script-context": {
-        "prefix": "s-script-context",
-        "body": [
-            "<script context=\"module\">",
-            "\t${1:// your script goes here}",
-            "</script>"
-        ],
-        "description": "add a script with context=\"module\" to your svelte file"
-    },
-    "svelte-style-tag": {
-        "prefix": "s-style",
-        "body": [
-            "<style>",
-            "\t${1:/* your styles go here */}",
-            "</style>"
-        ],
-        "description": "add styles to your svelte file"
-    },
-    "svelte-expression": {
-        "prefix": "s-expression",
-        "body": [
-            "{${1:expression}}"
-        ],
-        "description": "basic expression"
-    },
-    "svelte-expression-html": {
-        "prefix": "s-expression-html",
-        "body": [
-            "{@html ${1:expression}}"
-        ],
-        "description": "html content expression"
-    },
-    "svelte-expression-debug": {
-        "prefix": "s-expression-debug",
-        "body": [
-            "{@debug ${1:var1}${2:,var2}}"
-        ],
-        "description": "html content expression"
-    },
-    "svelte-if-block": {
-        "prefix": "s-if-block",
-        "body": [
-            "{#if ${1:condition}}",
-            "\t${2: <!-- content here -->}",
-            "{/if}"
-        ],
-        "description": "if block"
-    },
-    "svelte-if-else-block": {
-        "prefix": "s-if-else-block",
-        "body": [
-            "{#if ${1:condition}}",
-            "\t${2: <!-- content here -->}",
-            "{:else}",
-            "\t${3: <!-- else content here -->}",
-            "{/if}"
-        ],
-        "description": "if else block"
-    },
-    "svelte-else-block": {
-        "prefix": "s-else-block",
-        "body": [
-            "{:else}",
-            "\t${1: <!-- else content here -->}"
-        ],
-        "description": "else block"
-    },
-    "svelte-if-else-if-block": {
-        "prefix": "s-if-else-if-block",
-        "body": [
-            "{#if ${1:condition}}",
-            "\t${2: <!-- content here -->}",
-            "{:else if ${3: otherCondition}}",
-            "\t${4: <!-- else if content here -->}",
-            "{:else}",
-            "\t${5: <!-- else content here -->}",
-            "{/if}"
-        ],
-        "description": "if else if block"
-    },
-    "svelte-else-if-block": {
-        "prefix": "s-else-if-block",
-        "body": [
-            "{:else if ${1: otherCondition}}",
-            "\t${2: <!-- else if content here -->}"
-        ],
-        "description": "else if block"
-    },
-    "svelte-each-block": {
-        "prefix": "s-each-block",
-        "body": [
-            "{#each ${1:items} as ${2:item}}",
-            "\t${3: <!-- content here -->}",
-            "{/each}"
-        ],
-        "description": "each block"
-    },
-    "svelte-each-else-block": {
-        "prefix": "s-each-else-block",
-        "body": [
-            "{#each ${1:items} as ${2:item}}",
-            "\t${3: <!-- content here -->}",
-            "{:else}",
-            "\t${4: <!-- empty list -->}",
-            "{/each}"
-        ],
-        "description": "each else block"
-    },
-    "svelte-each-index-block": {
-        "prefix": "s-each-index-block",
-        "body": [
-            "{#each ${1:items} as ${2:item},${3:i}}",
-            "\t${4: <!-- content here -->}",
-            "{/each}"
-        ],
-        "description": "each index block"
-    },
-    "svelte-each-key-block": {
-        "prefix": "s-each-key-block",
-        "body": [
-            "{#each ${1:items} as ${2:item},(${3:key})}",
-            "\t${4: <!-- content here -->}",
-            "{/each}"
-        ],
-        "description": "each index block"
-    },
-    "svelte-each-index-key-block": {
-        "prefix": "s-each-index-key-block",
-        "body": [
-            "{#each ${1:items} as ${2:item},i (${3:key})}",
-            "\t${4: <!-- content here -->}",
-            "{/each}"
-        ],
-        "description": "each index key block"
-    },
-    "svelte-await-then-block": {
-        "prefix": "s-await-then-block",
-        "body": [
-            "{#await ${1:promise}}",
-            "\t<!-- promise is pending -->",
-            "{:then ${2:value}}",
-            "\t<!-- promise was fulfilled -->",
-            "{/await}"
-        ],
-        "description": "await then block"
-    },
-    "svelte-then-block": {
-        "prefix": "s-then-block",
-        "body": [
-            "{:then ${1:value}}",
-            "\t<!-- promise was fulfilled -->"
-        ],
-        "description": "then block"
-    },
-    "svelte-await-short-block": {
-        "prefix": "s-await-short-block",
-        "body": [
-            "{#await ${1:promise} then ${2:value}}",
-            "\t<!-- promise was fulfilled -->",
-            "{/await}"
-        ],
-        "description": "await short block"
-    },
-    "svelte-await-catch-block": {
-        "prefix": "s-await-catch-block",
-        "body": [
-            "{#await ${1:promise}}",
-            "\t<!-- ${1:promise} is pending -->",
-            "{:then ${value}}",
-            "\t<!-- ${1:promise} was fulfilled -->",
-            "{:catch error}",
-            "\t<!-- ${1:promise} was rejected -->",
-            "{/await}"
-        ],
-        "description": "await catch block"
-    },
-    "svelte-catch-block": {
-        "prefix": "s-catch-block",
-        "body": [
-            "{:catch error}",
-            "\t<!-- promise was rejected -->"
-        ],
-        "description": "catch block"
-    },
-    "svelte-on-event": {
-        "prefix": "s-on-event",
-        "body": [
-            "on:${1:eventname}={${2:handler}}"
-        ],
-        "description": "on event"
-    },
-    "svelte-on-event-forward": {
-        "prefix": "s-on-event-foward",
-        "body": [
-            "on:${1:eventname}"
-        ],
-        "description": "on event foward"
-    },
-    "svelte-on-event-modifiers": {
-        "prefix": "s-on-event-modifiers",
-        "body": [
-            "on:${1:eventname}|${2|preventDefault,stopPropagation,passive,capture,once|}={${3:handler}}"
-        ],
-        "description": "on event w/ modifiers"
-    },
-    "svelte-on-event-inline": {
-        "prefix": "s-on-event-inline",
-        "body": [
-            "on:${1:click}=\"{() => ${2:count += 1}}\""
-        ],
-        "description": "on event inline"
-    },
-    "svelte-modifiers": {
-        "prefix": "s-modifier",
-        "body": [
-            "|${1|preventDefault,stopPropagation,passive,capture,once|}"
-        ],
-        "description": "modifier"
-    },
-    "svelte-bind": {
-        "prefix": "s-bind",
-        "body": [
-            "bind:${1:property}"
-        ],
-        "description": "bind property"
-    },
-    "svelte-bind-property": {
-        "prefix": "s-bind-property",
-        "body": [
-            "bind:${1:property}={${2:variable}}"
-        ],
-        "description": "bind property"
-    },
-    "svelte-bind-video": {
-      "prefix": "s-bind-video",
-      "body": [
-        "<video",
-        "src={${1:clip}}",
-        "bind:${2:duration}",
-        "bind:${3:buffered}",
-        "bind:${4:played}",
-        "bind:${5:seekable}",
-        "bind:${6:seeking}",
-        "bind:${7:ended}",
-        "bind:${8:currentTime}",
-        "bind:${9:playbackRate}",
-        "bind:${10:paused}",
-        "bind:${11:volume}",
-        "bind:${12:muted}",
-        "bind:${13:videoWidth}",
-        "bind:${14:videoHeight}",
-        "></video>"
-      ],
-      "description": "bind property"
-    },
-    "svelte-bind-audio": {
-      "prefix": "s-bind-audio",
-      "body": [
-        "<audio",
-        "src={${1:clip}}",
-        "bind:${2:duration}",
-        "bind:${3:buffered}",
-        "bind:${4:played}",
-        "bind:${5:seekable}",
-        "bind:${6:seeking}",
-        "bind:${7:ended}",
-        "bind:${8:currentTime}",
-        "bind:${9:playbackRate}",
-        "bind:${10:paused}",
-        "bind:${11:volume}",
-        "bind:${12:muted}",
-        "></audio>"
-      ],
-      "description": "bind property"
-    },
-    "svelte-bind-media-elements": {
-      "prefix": "s-bind-media-elements",
-      "body": [
-        "bind:${1|duration,buffered,played,seekable,seeking,ended,currentTime,playbackRate,paused,volume,muted,videoWidth,videoHeight|}"
-      ],
-      "description": "bind property"
-    },
-    "svelte-bind-block-level": {
-        "prefix": "s-bind-block-level",
-        "body": [
-            "bind:${1|clientWidth,clientHeight,offsetWidth,offsetHeight|}={${2:variable}}"
-        ],
-        "description": "bind property"
-    },
-    "svelte-bind-group": {
-        "prefix": "s-bind-group",
-        "body": [
-            "bind:group={${1:variable}}"
-        ],
-        "description": "bind group"
-    },
-    "svelte-bind-this": {
-        "prefix": "s-bind-this",
-        "body": [
-            "bind:this={${1:dom_node}}"
-        ],
-        "description": "bind this"
-    },
-    "svelte-class": {
-        "prefix": "s-class",
-        "body": [
-            "class:${1:name}={${2:condition}}"
-        ],
-        "description": "class"
-    },
-    "svelte-class-short": {
-        "prefix": "s-class-short",
-        "body": [
-            "class:${1:name}}"
-        ],
-        "description": "class shorthand"
-    },
-    "svelte-use": {
-        "prefix": "s-use",
-        "body": [
-            "use:action"
-        ],
-        "description": "use action"
-    },
-    "svelte-use-parameters": {
-        "prefix": "s-use-parameters",
-        "body": [
-            "use:action={${1:parameters}}"
-        ],
-        "description": "use action w/ parameters"
-    },
-    "svelte-transition": {
-        "prefix": "s-transition",
-        "body": [
-            "${1|transition,in,out|}:${2:name}"
-        ],
-        "description": "transition"
-    },
-    "svelte-transition-params": {
-        "prefix": "s-transition-params",
-        "body": [
-            "${1|transition,in,out|}:${2:name}={${3:params}}"
-        ],
-        "description": "transition-params"
-    },
-    "svelte-transition-events": {
-        "prefix": "s-transition-events",
-        "body": [
-            "on:${1|introstart,introend,outrostart,outroend|}=\"{() => status = '${1|introstart,introend,outrostart,outroend|}'}\""
-        ],
-        "description": "transition-events"
-    },
-    "svelte-transition-local": {
-        "prefix": "s-transition-local",
-        "body": [
-            "${1|transition,in,out|}:${2:name}|${3:local}"
-        ],
-        "description": "transition local"
-    },
-    "svelte-transition-all": {
-        "prefix": "s-transition-all",
-        "body": [
-            "${1|transition,in,out|}:${2:name}|${3:local}={${4:params}}"
-        ],
-        "description": "transition"
-    },
-    "svelte-animate": {
-        "prefix": "s-animate",
-        "body": [
-            "animate:${1:name}={${2:params}}"
-        ],
-        "description": "animate"
-    },
-    "svelte-slot": {
-        "prefix": "s-slot",
-        "body": [
-            "<slot>${1:<!-- optional fallback -->}</slot>"
-        ],
-        "description": "slot"
-    },
-    "svelte-slot-name": {
-        "prefix": "s-slot-name",
-        "body": [
-            "<slot name=\"${1:x}\">${2:<!-- optional fallback -->}</slot>"
-        ],
-        "description": "slot w/ name"
-    },
-    "svelte-slot-prop": {
-        "prefix": "s-slot-prop",
-        "body": [
-            "<slot ${1:prop}={${2:value}}>${3:<!-- optional fallback -->}</slot>"
-        ],
-        "description": "slot w/ prop"
-    },
-    "svelte-self": {
-        "prefix": "s-self",
-        "body": [
-            "<svelte:self />"
-        ],
-        "description": "svelte:self"
-    },
-    "svelte-self-prop": {
-        "prefix": "s-self-prop",
-        "body": [
-            "<svelte:self ${1:prop}={${2:value}} />"
-        ],
-        "description": "svelte:self"
-    },
-    "svelte-component": {
-        "prefix": "s-component",
-        "body": [
-            "<svelte:component this={${1:component}} />"
-        ],
-        "description": "svelte:component"
-    },
-    "svelte-window": {
-        "prefix": "s-window",
-        "body": [
-            "<svelte:window />"
-        ],
-        "description": "svelte:window"
-    },
-    "svelte-window-bind": {
-        "prefix": "s-window-bind",
-        "body": [
-            "bind:${1|innerWidth,innerHeight,outerWidth,outerHeight,scrollX,scrollY,online|}={${2:variable}}"
-        ],
-        "description": "svelte:window bind properties"
-    },
-    "svelte-body": {
-        "prefix": "s-body",
-        "body": [
-            "<svelte:body />"
-        ],
-        "description": "svelte:body"
-    },
-    "svelte-head": {
-        "prefix": "s-head",
-        "body": [
-            "<svelte:head>",
-            "\t${1:<!-- head content -->}",
-            "</svelte:head>"
-        ],
-        "description": "svelte:head"
-    },
-    "svelte-options": {
-        "prefix": "s-options",
-        "body": [
-            "<svelte:options ${1|immutable,accessors,namespace,tag|}={${2:value}}/>"
-        ],
-        "description": "svelte:options"
-    }
+	"svelte-component-format": {
+		"prefix": "s-component-format",
+		"body": [
+			"<script>",
+			"\t${1:// your script goes here}",
+			"</script>",
+			"",
+			"<style>",
+			"\t${2:/* your styles go here */}",
+			"</style>",
+			"",
+			"${3:<!-- markup (zero or more items) goes here -->}"
+		],
+		"description": "add a script to your svelte file"
+	},
+	"svelte-script-tag": {
+		"prefix": "s-script",
+		"body": ["<script>", "\t${1:// your script goes here}", "</script>"],
+		"description": "add a script to your svelte file"
+	},
+	"svelte-typescript-script-tag": {
+		"prefix": "s-ts-script",
+		"body": [
+			"<script lang=\"ts\">",
+			"\t${1:// your script goes here}",
+			"</script>"
+		],
+		"description": "add a typescript script to your svelte file"
+	},
+	"svelte-script-context": {
+		"prefix": "s-script-context",
+		"body": [
+			"<script context=\"module\">",
+			"\t${1:// your script goes here}",
+			"</script>"
+		],
+		"description": "add a script with context=\"module\" to your svelte file"
+	},
+	"svelte-style-tag": {
+		"prefix": "s-style",
+		"body": ["<style>", "\t${1:/* your styles go here */}", "</style>"],
+		"description": "add styles to your svelte file"
+	},
+	"svelte-expression": {
+		"prefix": "s-expression",
+		"body": ["{${1:expression}}"],
+		"description": "basic expression"
+	},
+	"svelte-expression-html": {
+		"prefix": "s-expression-html",
+		"body": ["{@html ${1:expression}}"],
+		"description": "html content expression"
+	},
+	"svelte-expression-debug": {
+		"prefix": "s-expression-debug",
+		"body": ["{@debug ${1:var1}${2:,var2}}"],
+		"description": "html content expression"
+	},
+	"svelte-if-block": {
+		"prefix": "s-if-block",
+		"body": [
+			"{#if ${1:condition}}",
+			"\t${2: <!-- content here -->}",
+			"{/if}"
+		],
+		"description": "if block"
+	},
+	"svelte-if-else-block": {
+		"prefix": "s-if-else-block",
+		"body": [
+			"{#if ${1:condition}}",
+			"\t${2: <!-- content here -->}",
+			"{:else}",
+			"\t${3: <!-- else content here -->}",
+			"{/if}"
+		],
+		"description": "if else block"
+	},
+	"svelte-else-block": {
+		"prefix": "s-else-block",
+		"body": ["{:else}", "\t${1: <!-- else content here -->}"],
+		"description": "else block"
+	},
+	"svelte-if-else-if-block": {
+		"prefix": "s-if-else-if-block",
+		"body": [
+			"{#if ${1:condition}}",
+			"\t${2: <!-- content here -->}",
+			"{:else if ${3: otherCondition}}",
+			"\t${4: <!-- else if content here -->}",
+			"{:else}",
+			"\t${5: <!-- else content here -->}",
+			"{/if}"
+		],
+		"description": "if else if block"
+	},
+	"svelte-else-if-block": {
+		"prefix": "s-else-if-block",
+		"body": [
+			"{:else if ${1: otherCondition}}",
+			"\t${2: <!-- else if content here -->}"
+		],
+		"description": "else if block"
+	},
+	"svelte-each-block": {
+		"prefix": "s-each-block",
+		"body": [
+			"{#each ${1:items} as ${2:item}}",
+			"\t${3: <!-- content here -->}",
+			"{/each}"
+		],
+		"description": "each block"
+	},
+	"svelte-each-else-block": {
+		"prefix": "s-each-else-block",
+		"body": [
+			"{#each ${1:items} as ${2:item}}",
+			"\t${3: <!-- content here -->}",
+			"{:else}",
+			"\t${4: <!-- empty list -->}",
+			"{/each}"
+		],
+		"description": "each else block"
+	},
+	"svelte-each-index-block": {
+		"prefix": "s-each-index-block",
+		"body": [
+			"{#each ${1:items} as ${2:item},${3:i}}",
+			"\t${4: <!-- content here -->}",
+			"{/each}"
+		],
+		"description": "each index block"
+	},
+	"svelte-each-key-block": {
+		"prefix": "s-each-key-block",
+		"body": [
+			"{#each ${1:items} as ${2:item},(${3:key})}",
+			"\t${4: <!-- content here -->}",
+			"{/each}"
+		],
+		"description": "each index block"
+	},
+	"svelte-each-index-key-block": {
+		"prefix": "s-each-index-key-block",
+		"body": [
+			"{#each ${1:items} as ${2:item},i (${3:key})}",
+			"\t${4: <!-- content here -->}",
+			"{/each}"
+		],
+		"description": "each index key block"
+	},
+	"svelte-await-then-block": {
+		"prefix": "s-await-then-block",
+		"body": [
+			"{#await ${1:promise}}",
+			"\t<!-- promise is pending -->",
+			"{:then ${2:value}}",
+			"\t<!-- promise was fulfilled -->",
+			"{/await}"
+		],
+		"description": "await then block"
+	},
+	"svelte-then-block": {
+		"prefix": "s-then-block",
+		"body": ["{:then ${1:value}}", "\t<!-- promise was fulfilled -->"],
+		"description": "then block"
+	},
+	"svelte-await-short-block": {
+		"prefix": "s-await-short-block",
+		"body": [
+			"{#await ${1:promise} then ${2:value}}",
+			"\t<!-- promise was fulfilled -->",
+			"{/await}"
+		],
+		"description": "await short block"
+	},
+	"svelte-await-catch-block": {
+		"prefix": "s-await-catch-block",
+		"body": [
+			"{#await ${1:promise}}",
+			"\t<!-- ${1:promise} is pending -->",
+			"{:then ${value}}",
+			"\t<!-- ${1:promise} was fulfilled -->",
+			"{:catch error}",
+			"\t<!-- ${1:promise} was rejected -->",
+			"{/await}"
+		],
+		"description": "await catch block"
+	},
+	"svelte-catch-block": {
+		"prefix": "s-catch-block",
+		"body": ["{:catch error}", "\t<!-- promise was rejected -->"],
+		"description": "catch block"
+	},
+	"svelte-on-event": {
+		"prefix": "s-on-event",
+		"body": ["on:${1:eventname}={${2:handler}}"],
+		"description": "on event"
+	},
+	"svelte-on-event-forward": {
+		"prefix": "s-on-event-foward",
+		"body": ["on:${1:eventname}"],
+		"description": "on event foward"
+	},
+	"svelte-on-event-modifiers": {
+		"prefix": "s-on-event-modifiers",
+		"body": [
+			"on:${1:eventname}|${2|preventDefault,stopPropagation,passive,capture,once|}={${3:handler}}"
+		],
+		"description": "on event w/ modifiers"
+	},
+	"svelte-on-event-inline": {
+		"prefix": "s-on-event-inline",
+		"body": ["on:${1:click}=\"{() => ${2:count += 1}}\""],
+		"description": "on event inline"
+	},
+	"svelte-modifiers": {
+		"prefix": "s-modifier",
+		"body": ["|${1|preventDefault,stopPropagation,passive,capture,once|}"],
+		"description": "modifier"
+	},
+	"svelte-bind": {
+		"prefix": "s-bind",
+		"body": ["bind:${1:property}"],
+		"description": "bind property"
+	},
+	"svelte-bind-property": {
+		"prefix": "s-bind-property",
+		"body": ["bind:${1:property}={${2:variable}}"],
+		"description": "bind property"
+	},
+	"svelte-bind-video": {
+		"prefix": "s-bind-video",
+		"body": [
+			"<video",
+			"src={${1:clip}}",
+			"bind:${2:duration}",
+			"bind:${3:buffered}",
+			"bind:${4:played}",
+			"bind:${5:seekable}",
+			"bind:${6:seeking}",
+			"bind:${7:ended}",
+			"bind:${8:currentTime}",
+			"bind:${9:playbackRate}",
+			"bind:${10:paused}",
+			"bind:${11:volume}",
+			"bind:${12:muted}",
+			"bind:${13:videoWidth}",
+			"bind:${14:videoHeight}",
+			"></video>"
+		],
+		"description": "bind property"
+	},
+	"svelte-bind-audio": {
+		"prefix": "s-bind-audio",
+		"body": [
+			"<audio",
+			"src={${1:clip}}",
+			"bind:${2:duration}",
+			"bind:${3:buffered}",
+			"bind:${4:played}",
+			"bind:${5:seekable}",
+			"bind:${6:seeking}",
+			"bind:${7:ended}",
+			"bind:${8:currentTime}",
+			"bind:${9:playbackRate}",
+			"bind:${10:paused}",
+			"bind:${11:volume}",
+			"bind:${12:muted}",
+			"></audio>"
+		],
+		"description": "bind property"
+	},
+	"svelte-bind-media-elements": {
+		"prefix": "s-bind-media-elements",
+		"body": [
+			"bind:${1|duration,buffered,played,seekable,seeking,ended,currentTime,playbackRate,paused,volume,muted,videoWidth,videoHeight|}"
+		],
+		"description": "bind property"
+	},
+	"svelte-bind-block-level": {
+		"prefix": "s-bind-block-level",
+		"body": [
+			"bind:${1|clientWidth,clientHeight,offsetWidth,offsetHeight|}={${2:variable}}"
+		],
+		"description": "bind property"
+	},
+	"svelte-bind-group": {
+		"prefix": "s-bind-group",
+		"body": ["bind:group={${1:variable}}"],
+		"description": "bind group"
+	},
+	"svelte-bind-this": {
+		"prefix": "s-bind-this",
+		"body": ["bind:this={${1:dom_node}}"],
+		"description": "bind this"
+	},
+	"svelte-class": {
+		"prefix": "s-class",
+		"body": ["class:${1:name}={${2:condition}}"],
+		"description": "class"
+	},
+	"svelte-class-short": {
+		"prefix": "s-class-short",
+		"body": ["class:${1:name}}"],
+		"description": "class shorthand"
+	},
+	"svelte-use": {
+		"prefix": "s-use",
+		"body": ["use:action"],
+		"description": "use action"
+	},
+	"svelte-use-parameters": {
+		"prefix": "s-use-parameters",
+		"body": ["use:action={${1:parameters}}"],
+		"description": "use action w/ parameters"
+	},
+	"svelte-transition": {
+		"prefix": "s-transition",
+		"body": ["${1|transition,in,out|}:${2:name}"],
+		"description": "transition"
+	},
+	"svelte-transition-params": {
+		"prefix": "s-transition-params",
+		"body": ["${1|transition,in,out|}:${2:name}={${3:params}}"],
+		"description": "transition-params"
+	},
+	"svelte-transition-events": {
+		"prefix": "s-transition-events",
+		"body": [
+			"on:${1|introstart,introend,outrostart,outroend|}=\"{() => status = '${1|introstart,introend,outrostart,outroend|}'}\""
+		],
+		"description": "transition-events"
+	},
+	"svelte-transition-local": {
+		"prefix": "s-transition-local",
+		"body": ["${1|transition,in,out|}:${2:name}|${3:local}"],
+		"description": "transition local"
+	},
+	"svelte-transition-all": {
+		"prefix": "s-transition-all",
+		"body": ["${1|transition,in,out|}:${2:name}|${3:local}={${4:params}}"],
+		"description": "transition"
+	},
+	"svelte-animate": {
+		"prefix": "s-animate",
+		"body": ["animate:${1:name}={${2:params}}"],
+		"description": "animate"
+	},
+	"svelte-slot": {
+		"prefix": "s-slot",
+		"body": ["<slot>${1:<!-- optional fallback -->}</slot>"],
+		"description": "slot"
+	},
+	"svelte-slot-name": {
+		"prefix": "s-slot-name",
+		"body": [
+			"<slot name=\"${1:x}\">${2:<!-- optional fallback -->}</slot>"
+		],
+		"description": "slot w/ name"
+	},
+	"svelte-slot-prop": {
+		"prefix": "s-slot-prop",
+		"body": [
+			"<slot ${1:prop}={${2:value}}>${3:<!-- optional fallback -->}</slot>"
+		],
+		"description": "slot w/ prop"
+	},
+	"svelte-self": {
+		"prefix": "s-self",
+		"body": ["<svelte:self />"],
+		"description": "svelte:self"
+	},
+	"svelte-self-prop": {
+		"prefix": "s-self-prop",
+		"body": ["<svelte:self ${1:prop}={${2:value}} />"],
+		"description": "svelte:self"
+	},
+	"svelte-component": {
+		"prefix": "s-component",
+		"body": ["<svelte:component this={${1:component}} />"],
+		"description": "svelte:component"
+	},
+	"svelte-window": {
+		"prefix": "s-window",
+		"body": ["<svelte:window />"],
+		"description": "svelte:window"
+	},
+	"svelte-window-bind": {
+		"prefix": "s-window-bind",
+		"body": [
+			"bind:${1|innerWidth,innerHeight,outerWidth,outerHeight,scrollX,scrollY,online|}={${2:variable}}"
+		],
+		"description": "svelte:window bind properties"
+	},
+	"svelte-body": {
+		"prefix": "s-body",
+		"body": ["<svelte:body />"],
+		"description": "svelte:body"
+	},
+	"svelte-head": {
+		"prefix": "s-head",
+		"body": [
+			"<svelte:head>",
+			"\t${1:<!-- head content -->}",
+			"</svelte:head>"
+		],
+		"description": "svelte:head"
+	},
+	"svelte-options": {
+		"prefix": "s-options",
+		"body": [
+			"<svelte:options ${1|immutable,accessors,namespace,tag|}={${2:value}}/>"
+		],
+		"description": "svelte:options"
+	}
 }
