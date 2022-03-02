@@ -53,7 +53,7 @@ Contributions are welcome! See [Contribution Guidelines](CONTRIBUTING.md) to get
 | s-each-block           | each block                                             |
 | s-each-else-block      | each else block                                        |
 | s-each-index-block     | each index block                                       |
-| s-each-key-block       | each index block                                       |
+| s-each-key-block       | each key block                                         |
 | s-each-index-key-block | each index key block                                   |
 | s-await-then-block     | await then block                                       |
 | s-then-block           | then block                                             |
